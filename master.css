@@ -1,0 +1,130 @@
+html{
+    background-color: #585151;
+}
+
+/*Code générique d'un personnage*/
+
+.personnages {
+    display: grid;
+}
+.personnage{
+    border: solid red 2px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px;
+}
+
+.personnage img{
+    width: 300px;
+    margin: auto;
+}
+
+/*Code pour le logo*/
+
+.logo{
+    grid-area: logo;
+    margin: auto;
+}
+.logo img{
+    width: 300px;
+}
+
+/*Code pour chaque personnage*/
+
+.personnage-finn{
+    grid-area: header;
+    border-color: #00ADE3;
+    background-color: #FFFFFF;
+}
+.personnage-beemo{
+    grid-area: content;
+    border-color: #BAE0CD;
+    background-color: #23B1A5;
+}
+.personnage-jack{
+    grid-area: content2;
+    border-color: #FCB823;
+}
+.personnage-marceline{
+    grid-area: content3;
+    border-color: #EEF1F3;
+    background-color: #020306;
+    color: white;
+}
+.personnage-miss-rainicorn{
+    grid-area: content4;
+    border-color: #E0ABCE;
+    background-color: #F8F390;
+}
+.personnage-princesse-chewingum{
+    grid-area: content5;
+    border-color: #E7CEE3;
+    background-color: #F299BF;
+}
+.personnage-princesse-des-flammes{
+    grid-area: content6;
+    border-color: #FFA300;
+    background-color: #FF410B;
+}
+.personnage-princesse-lumpy-space{
+    grid-area: content7;
+    border-color: #BB9DC8;
+    background-color: #FFDF74;
+}
+.personnage-roi-des-glaces{
+    grid-area: footer;
+    border-color: #A3D8F5;
+    background-color: #0072BC;
+}
+
+
+/*Code des media screen*/
+
+@media screen and (min-width:360px){
+.personnages{ 
+    grid-template-areas: 
+      "logo"
+      "header"
+      "content"
+      "content2"
+      "content3"
+      "content4"
+      "content5"
+      "content6"
+      "content7"
+      "footer";
+    }
+}
+
+@media screen and (min-width:768px){
+.personnages{
+    grid-template-columns: repeat(2,1fr);
+    grid-template-areas: 
+      "logo logo"
+      "header content"
+      "content2 content3"
+      "content4 content5"
+      "content6 content7"
+      "footer   footer";
+    }
+}
+@media screen and (min-width:1024px){
+.personnages{
+    grid-template-columns: repeat(3,1fr);
+    grid-template-areas: 
+      "logo logo logo"
+      "header content content2"
+      "content3 content4 content5"
+      "content6 content7 footer";
+    }
+}
+@media screen and (min-width:1280px){
+.personnages{
+    grid-template-columns: repeat(4,1fr);
+    grid-template-areas: 
+    "logo logo logo logo"
+    "header content content2 content3"
+    "content4 content5 content6 content7"
+    "footer footer footer footer";
+    }
+}
